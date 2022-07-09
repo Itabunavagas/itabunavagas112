@@ -21,33 +21,33 @@
 
         var arrayJobs = [];
 
-        let getJobs = async () => {
-            const response = await fetch(`https://api-vagas-itabuna.herokuapp.com/vagas`)
-            const data = await response.json()
-            // console.log(data);   
+        // let getJobs = async () => {
+        //     const response = await fetch(`https://api-vagas-itabuna.herokuapp.com/vagas`)
+        //     const data = await response.json()
+        //     // console.log(data);   
         
-            data.map(myfunction)
-            function myfunction (itemAtual){
-                arrayJobs.push(itemAtual)
-            }
+        //     data.map(myfunction)
+        //     function myfunction (itemAtual){
+        //         arrayJobs.push(itemAtual)
+        //     }
         
-            // console.log(data[0].id)
-            // console.log(data[0].nameCompany)
-            // showJobs(data);
-            let whereFather = document.querySelector("#father");
-            for (let i=0; i <= arrayJobs.length -1  ; i+=1 ){
-                let newLi = document.createElement("li");
-                    //se impar li pra esquerda se par li pra direita
-                let contentOfElement = 
-                `ID:  ${arrayJobs[i].id} | Empresa: ${arrayJobs[i].nameCompany} | Vaga: ${arrayJobs[i].job} 
-                | Contato: ${arrayJobs[i].contact} | Descrição: ${arrayJobs[i].Description} ` ;
-                newLi.innerText = contentOfElement; 
-                whereFather.appendChild(newLi);
-            }
+        //     // console.log(data[0].id)
+        //     // console.log(data[0].nameCompany)
+        //     // showJobs(data);
+        //     let whereFather = document.querySelector("#father");
+        //     for (let i=0; i <= arrayJobs.length -1  ; i+=1 ){
+        //         let newLi = document.createElement("li");
+        //             //se impar li pra esquerda se par li pra direita
+        //         let contentOfElement = 
+        //         `ID:  ${arrayJobs[i].id} | Empresa: ${arrayJobs[i].nameCompany} | Vaga: ${arrayJobs[i].job} 
+        //         | Contato: ${arrayJobs[i].contact} | Descrição: ${arrayJobs[i].Description} ` ;
+        //         newLi.innerText = contentOfElement; 
+        //         whereFather.appendChild(newLi);
+        //     }
           
-        } 
+        // } 
         
-        getJobs(); 
+        // getJobs(); 
 
 
        // -------------------------------------------------------------------- 
@@ -76,6 +76,7 @@ const getPosts = async () => {
 // console.log(data) 
     return response.json()
 } 
+
 const addPostsIntoDOM = async () =>{
     const posts = await getPosts()
     const postsTemplate = posts.map(({ id, nameCompany, job, contact, Description}) => `
