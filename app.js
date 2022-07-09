@@ -39,8 +39,8 @@
                 let newLi = document.createElement("li");
                     //se impar li pra esquerda se par li pra direita
                 let contentOfElement = 
-                `ID:  ${arrayJobs[i].id} | Empresa: ${arrayJobs[i].nameCompany} | Endereço: ${arrayJobs[i].address} 
-                | email: ${arrayJobs[i].email} | Telefone:  ${arrayJobs[i].tel} | Descrição: ${arrayJobs[i].Description} ` ;
+                `ID:  ${arrayJobs[i].id} | Empresa: ${arrayJobs[i].nameCompany} | Vaga: ${arrayJobs[i].job} 
+                | Contato: ${arrayJobs[i].contact} | Descrição: ${arrayJobs[i].Description} ` ;
                 newLi.innerText = contentOfElement; 
                 whereFather.appendChild(newLi);
             }
