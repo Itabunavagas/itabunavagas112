@@ -78,14 +78,13 @@ const getPosts = async () => {
 } 
 const addPostsIntoDOM = async () =>{
     const posts = await getPosts()
-    const postsTemplate = posts.map(({ id, nameCompany, address, email, tel, Description}) => `
+    const postsTemplate = posts.map(({ id, nameCompany, job, contact, Description}) => `
         <div class="post"> 
             <div class="number">${id}</div>
             <div class="post-info"> 
                 <h2 class="post-title">${nameCompany}</h2>
-                <p class="post-body">${address}</p>
-                <p class="post-body">${email}</p>  
-                <p class="post-body">${tel}</p>
+                <p class="post-body">${job}</p>
+                <p class="post-body">${contact}</p>
                 <p class="post-body">${Description}</p>
             </div> 
         </div>
