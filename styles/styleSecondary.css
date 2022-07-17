@@ -46,8 +46,23 @@ list-style-type: none;
   display: block;
   
 }
+
+/* .vagasdois{
+  font-size: x-large;
+  color: #fff;
+  text-decoration: none;
+  display: grid;
+} */
+
+.bi {
+  height: 22px;
+}
+
 .vagas:hover{
   color: #712cf9;
+}
+.box-sizeone{
+  min-width: 100px;
 }
 
 .pull-down{
